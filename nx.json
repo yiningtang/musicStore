@@ -1,34 +1,27 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "music-store",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
   "projects": {
-    "music-store": {
-      "tags": []
-    },
-    "music-store-e2e": {
-      "tags": [],
-      "implicitDependencies": ["music-store"]
-    }
+    "music-store": { "tags": [] },
+    "music-store-e2e": { "tags": [], "implicitDependencies": ["music-store"] },
+    "tracks-list-shell": { "tags": ["ms"] },
+    "tracks-list-ui": { "tags": ["ms"] },
+    "tracks-list-feature": { "tags": ["ms"] },
+    "tracks-list-util": { "tags": ["ms"] },
+    "tracks-list-data-access": { "tags": ["ms"] }
   }
 }

@@ -74,7 +74,7 @@
               "apps/music-store/src/favicon.ico",
               "apps/music-store/src/assets"
             ],
-            "styles": ["apps/music-store/src/styles.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "apps/music-store/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -168,6 +168,199 @@
           "options": {
             "tsConfig": ["apps/music-store-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/music-store-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "tracks-list-shell": {
+      "projectType": "library",
+      "root": "libs/tracks-list/shell",
+      "sourceRoot": "libs/tracks-list/shell/src",
+      "prefix": "ms",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/tracks-list/shell/tsconfig.lib.json",
+            "project": "libs/tracks-list/shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/tracks-list/shell/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/tracks-list/shell/tsconfig.lib.json",
+              "libs/tracks-list/shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/tracks-list/shell/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tracks-list/shell"],
+          "options": {
+            "jestConfig": "libs/tracks-list/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "tracks-list-ui": {
+      "projectType": "library",
+      "root": "libs/tracks-list/ui",
+      "sourceRoot": "libs/tracks-list/ui/src",
+      "prefix": "ms",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/tracks-list/ui/tsconfig.lib.json",
+            "project": "libs/tracks-list/ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/tracks-list/ui/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/tracks-list/ui/tsconfig.lib.json",
+              "libs/tracks-list/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/tracks-list/ui/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tracks-list/ui"],
+          "options": {
+            "jestConfig": "libs/tracks-list/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "tracks-list-feature": {
+      "projectType": "library",
+      "root": "libs/tracks-list/feature",
+      "sourceRoot": "libs/tracks-list/feature/src",
+      "prefix": "ms",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/tracks-list/feature/tsconfig.lib.json",
+            "project": "libs/tracks-list/feature/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/tracks-list/feature/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/tracks-list/feature/tsconfig.lib.json",
+              "libs/tracks-list/feature/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/tracks-list/feature/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tracks-list/feature"],
+          "options": {
+            "jestConfig": "libs/tracks-list/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "tracks-list-util": {
+      "projectType": "library",
+      "root": "libs/tracks-list/util",
+      "sourceRoot": "libs/tracks-list/util/src",
+      "prefix": "ms",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/tracks-list/util/tsconfig.lib.json",
+            "project": "libs/tracks-list/util/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/tracks-list/util/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/tracks-list/util/tsconfig.lib.json",
+              "libs/tracks-list/util/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/tracks-list/util/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tracks-list/util"],
+          "options": {
+            "jestConfig": "libs/tracks-list/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "tracks-list-data-access": {
+      "projectType": "library",
+      "root": "libs/tracks-list/data-access",
+      "sourceRoot": "libs/tracks-list/data-access/src",
+      "prefix": "ms",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/tracks-list/data-access/tsconfig.lib.json",
+            "project": "libs/tracks-list/data-access/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/tracks-list/data-access/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/tracks-list/data-access/tsconfig.lib.json",
+              "libs/tracks-list/data-access/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/tracks-list/data-access/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tracks-list/data-access"],
+          "options": {
+            "jestConfig": "libs/tracks-list/data-access/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

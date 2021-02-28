@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@musicStore/tracks-list": ["libs/tracks-list/shell/src/index.ts"],
+      "@music-store/tracks-list/ui": ["libs/tracks-list/ui/src/index.ts"],
+      "@music-store/tracks-list/feature": [
+        "libs/tracks-list/feature/src/index.ts"
+      ],
+      "@music-store/tracks-list/util": ["libs/tracks-list/util/src/index.ts"],
+      "@music-store/tracks-list/data-access": [
+        "libs/tracks-list/data-access/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
